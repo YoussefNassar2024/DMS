@@ -81,7 +81,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
                         <button 
                             onClick={() => navigateTo('about')}
                             className="glass text-white font-black py-5 px-12 rounded-full hover:bg-white/10 transition-all duration-300 transform hover:scale-105 uppercase tracking-widest text-xs">
-                            Our Strategy
+                            Our Story
                         </button>
                     </div>
                 </div>
@@ -91,14 +91,17 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
                 </div>
             </section>
 
-            {/* Clearwater Identity Section */}
+            {/* Clearwater Identity Section - NEW */}
             <section className="py-24 bg-white border-b border-gray-100">
                 <div className="container mx-auto px-6 text-center max-w-5xl">
-                    <h2 className="text-2xl md:text-3xl font-black text-dms-gray uppercase tracking-tighter mb-8 will-animate">
+                    <h2 className="text-2xl md:text-4xl font-black text-dms-gray uppercase tracking-tighter mb-8 will-animate">
                         At <span className="text-dms-green">Trust the Data</span> in Clearwater, FL
                     </h2>
-                    <p className="text-lg text-gray-500 font-medium leading-relaxed will-animate" style={{ animationDelay: '0.1s' }}>
+                    <p className="text-lg text-gray-500 font-medium leading-relaxed will-animate mb-8" style={{ animationDelay: '0.1s' }}>
                         We are a marketing and SEO company that works closely with our clients to understand their business and help them set their company apart from the competition. We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
+                    </p>
+                    <p className="text-lg text-gray-500 font-medium leading-relaxed will-animate" style={{ animationDelay: '0.2s' }}>
+                        The Internet is highly competitive. We understand using the right marketing strategies is essential to elevate your business above all the others.
                     </p>
                 </div>
             </section>
@@ -123,11 +126,14 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
                             Where does your business <span className="text-dms-green">rank?</span>
                         </h2>
                         <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
-                            With help from our SEO company in Clearwater, FL, you can more easily outrank your competitors for the right keywords to put your name in front of more prospective customers. The Internet is highly competitive, and our strategies elevate you above the rest.
+                            With help from our SEO company in Clearwater, FL, you can more easily outrank your competitors for the right keywords to put your name in front of more prospective customers.
+                        </p>
+                        <p className="text-lg text-gray-600 mb-10 leading-relaxed font-medium">
+                            We understand using the right marketing strategies is essential to elevate your business above all the others. We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
                         </p>
                         <button onClick={() => navigateTo('about')} className="flex items-center gap-4 text-dms-gray font-black uppercase tracking-widest group">
                             <span className="h-[2px] w-12 bg-dms-green transition-all duration-500 group-hover:w-20"></span>
-                            Our Local Strategy
+                            Our Strategy
                         </button>
                     </div>
                 </div>
@@ -159,19 +165,19 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo }) => {
                 </div>
             </section>
 
-             {/* Dynamic Testimonial */}
+             {/* Testimonial Affirmation - NEW */}
             <section className="py-32 bg-dms-dark-gray text-white relative overflow-hidden">
                 <div className="absolute left-0 top-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-dms-green via-transparent to-transparent"></div>
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-4xl mx-auto text-center will-animate">
-                        <blockquote className="text-2xl md:text-4xl font-light italic leading-relaxed mb-12">
-                            "The Internet is highly competitive. Trust the Data gave us the right marketing strategies essential to elevate our business above all the others."
-                        </blockquote>
+                        <p className="text-2xl md:text-3xl font-light leading-relaxed mb-12">
+                            "The Internet is highly competitive. We understand using the right marketing strategies is essential to elevate your business above all the others."
+                        </p>
                         <div className="flex items-center justify-center gap-4">
                             <div className="w-12 h-[1px] bg-dms-green"></div>
                             <div>
-                                <div className="font-black uppercase tracking-widest text-sm">Clearwater Partner</div>
-                                <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Growth Client</div>
+                                <div className="font-black uppercase tracking-widest text-sm text-dms-green">Trust the Data</div>
+                                <div className="text-xs text-gray-500 uppercase tracking-widest mt-1">Clearwater, FL</div>
                             </div>
                             <div className="w-12 h-[1px] bg-dms-green"></div>
                         </div>

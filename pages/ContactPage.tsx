@@ -1,15 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ContactPage: React.FC = () => {
+    const [copyFeedback, setCopyFeedback] = useState(false);
+
     const services = [
-        "SEO Strategy",
-        "Social Media Ads",
-        "Search Engine Marketing",
-        "Brand Identity",
-        "Content Production",
-        "Website Design",
+        "SEARCH ENGINE OPTIMIZATION",
+        "SOCIAL MEDIA MARKETING",
+        "CONTENT MARKETING",
+        "WEBSITE DESIGN",
+        "PAY PER CLICK",
         "Other"
     ];
+
+    const handlePhoneClick = (e: React.MouseEvent) => {
+        const phone = "(727) 218-4871";
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (!isMobile) {
+            e.preventDefault();
+            navigator.clipboard.writeText("7272184871").then(() => {
+                setCopyFeedback(true);
+                setTimeout(() => setCopyFeedback(false), 2000);
+            });
+        }
+    };
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -60,9 +74,21 @@ const ContactPage: React.FC = () => {
                                 <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Direct Email</h3>
                                 <a href="mailto:info@trustthedata.net" className="text-2xl font-light hover:text-dms-green transition-colors">info@trustthedata.net</a>
                             </div>
-                            <div>
+                            <div className="relative">
                                 <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Clearwater Line</h3>
-                                <a href="tel:7272184871" className="text-2xl font-light hover:text-dms-green transition-colors">(727) 218-4871</a>
+                                <a 
+                                    href="tel:7272184871" 
+                                    onClick={handlePhoneClick}
+                                    className="text-2xl font-light hover:text-dms-green transition-colors block"
+                                >
+                                    (727) 218-4871
+                                </a>
+                                {copyFeedback && (
+                                    <span className="absolute -bottom-8 left-0 text-[10px] bg-dms-green text-white px-2 py-1 rounded animate-fade-in">
+                                        Copied to clipboard!
+                                    </span>
+                                )}
+                                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest hidden md:block">Click to copy number</p>
                             </div>
                              <div>
                                 <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Agency Address</h3>
@@ -72,7 +98,7 @@ const ContactPage: React.FC = () => {
 
                         <div className="mt-20 pt-12 border-t border-white/10">
                             <p className="text-xs text-gray-500 uppercase tracking-widest leading-relaxed font-bold">
-                                We proudly provide all the services you need for the best results.
+                                We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
                             </p>
                         </div>
                     </div>
