@@ -31,7 +31,7 @@ const BeliefCard: React.FC<{ title: string; children: React.ReactNode; index: nu
                 </div>
                 <h3 className="text-xl font-black text-dms-gray ml-4 uppercase tracking-tighter">{title}</h3>
             </div>
-            <p className="text-gray-500 leading-relaxed font-light">{children}</p>
+            <p className="text-gray-500 leading-relaxed font-medium">{children}</p>
         </div>
     )
 };
@@ -66,13 +66,13 @@ const AboutPage: React.FC = () => {
             <section className="bg-white pt-40 pb-20 border-b border-gray-100">
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl">
-                        <span className="text-dms-green font-bold text-xs uppercase tracking-[0.4em] mb-4 block animate-fade-in">Our Agency</span>
+                        <span className="text-dms-green font-bold text-xs uppercase tracking-[0.4em] mb-4 block animate-fade-in">Clearwater, FL Office</span>
                         <h1 className="text-5xl md:text-8xl font-black text-dms-gray mb-8 leading-[0.9] uppercase tracking-tighter animate-fade-in-up">
-                            Driven By Data.<br/>
-                            <span className="text-dms-green">Defined</span> By Results.
+                            Understanding Your<br/>
+                            <span className="text-dms-green">Business</span> Goals.
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            We bridge the gap between creative vision and measurable growth.
+                        <p className="text-xl md:text-2xl text-gray-500 font-medium max-w-3xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                            We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
                         </p>
                     </div>
                 </div>
@@ -86,22 +86,22 @@ const AboutPage: React.FC = () => {
                             <div className="relative">
                                 <img 
                                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2070" 
-                                    alt="Collaboration" 
+                                    alt="Collaboration in Clearwater" 
                                     className="rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
                                 />
-                                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-dms-blue rounded-full p-8 text-white flex items-center justify-center text-center font-bold text-xs uppercase tracking-widest hidden lg:flex">
-                                    Established Since 2009
+                                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-dms-blue rounded-full p-8 text-white flex items-center justify-center text-center font-black text-xs uppercase tracking-widest hidden lg:flex shadow-2xl">
+                                    Trust the Data<br/>FLORIDA
                                 </div>
                             </div>
                         </div>
                         <div className="md:w-1/2 will-animate" style={{ animationDelay: '0.2s' }}>
                             <h2 className="text-4xl font-black text-dms-gray mb-8 uppercase tracking-tighter">Our Story</h2>
-                            <div className="space-y-6 text-gray-500 text-lg font-light leading-relaxed">
+                            <div className="space-y-6 text-gray-500 text-lg font-medium leading-relaxed">
                                 <p>
-                                    At Dependable Marketing Solutions, we identified a critical flaw in the modern agency model: a lack of accountability. We saw business owners overwhelmed by jargon and underwhelmed by performance.
+                                    At Trust the Data in Clearwater, FL, we are a marketing and SEO company that works closely with our clients to understand their business and help them set their company apart from the competition.
                                 </p>
                                 <p>
-                                    Our mission was simple: provide radical clarity. We scale businesses by focusing on the metrics that actually matter to your bottom line. We work with you as partners, not vendors.
+                                    We proudly provide all the digital marketing services you need to ensure you get the best results for your business. The Internet is highly competitive. We understand using the right marketing strategies is essential to elevate your business above all the others.
                                 </p>
                             </div>
                         </div>
@@ -113,43 +113,23 @@ const AboutPage: React.FC = () => {
             <section className="py-32 bg-dms-light-gray">
                 <div className="container mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-20 will-animate">
-                        <h2 className="text-4xl md:text-6xl font-black text-dms-gray mb-6 uppercase tracking-tighter">Core <span className="text-dms-blue">Principles</span></h2>
+                        <h2 className="text-4xl md:text-6xl font-black text-dms-gray mb-6 uppercase tracking-tighter">Our <span className="text-dms-blue">Approach</span></h2>
                         <div className="w-24 h-1 bg-dms-green mx-auto mb-8"></div>
-                        <p className="text-gray-500 font-light text-lg">Every campaign we launch is rooted in these four pillars of excellence.</p>
+                        <p className="text-gray-600 font-medium text-lg">Setting your business apart through data-driven precision.</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
-                        <BeliefCard title="Unyielding Tenacity" index={0}>
-                           We solve problems that others walk away from. If the data shows a hurdle, we engineer a bridge.
+                        <BeliefCard title="Close Collaboration" index={0}>
+                           We work closely with our clients to understand their business at its core.
                         </BeliefCard>
-                        <BeliefCard title="Radical Curiosity" index={1}>
-                            The digital landscape shifts every hour. We stay ahead by being perpetual students of the game.
+                        <BeliefCard title="Strategic Elevation" index={1}>
+                            Elevating your business above the highly competitive internet landscape.
                         </BeliefCard>
-                         <BeliefCard title="Data Fidelity" index={2}>
-                           Trust is earned through transparency. We provide real-time reporting that leaves zero room for doubt.
+                         <BeliefCard title="Proven Results" index={2}>
+                           Ensuring you get the best results through comprehensive digital marketing.
                         </BeliefCard>
-                        <BeliefCard title="Deep Partnership" index={3}>
-                            Your success is our only KPI. We immerse ourselves in your brand until we're indistinguishable from your team.
+                        <BeliefCard title="Competitive Edge" index={3}>
+                            Helping you set your company apart from the competition strategically.
                         </BeliefCard>
-                    </div>
-                </div>
-            </section>
-
-            {/* Our Team Section */}
-            <section className="py-32 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-                        <div className="will-animate">
-                            <span className="text-dms-green font-bold text-xs uppercase tracking-[0.4em] mb-4 block">Meet the Minds</span>
-                            <h2 className="text-4xl md:text-6xl font-black text-dms-gray leading-none uppercase tracking-tighter">Our Core <br/><span className="text-dms-blue">Strategists</span></h2>
-                        </div>
-                        <p className="max-w-md text-gray-500 will-animate font-light text-lg" style={{ animationDelay: '0.2s' }}>
-                            A collective of data architects, creative disruptors, and performance specialists dedicated to your growth.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {teamMembers.map((member, index) => (
-                            <TeamMemberCard key={index} member={member} index={index} />
-                        ))}
                     </div>
                 </div>
             </section>
@@ -158,9 +138,9 @@ const AboutPage: React.FC = () => {
             <section className="py-20 bg-dms-blue text-white overflow-hidden relative">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">Ready to see the data?</h2>
+                    <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">Ready to outrank the rest?</h2>
                     <button className="bg-white text-dms-blue font-black py-6 px-12 rounded-full hover:bg-dms-green hover:text-white transition-all duration-300 uppercase tracking-widest text-sm shadow-2xl">
-                        Schedule a Strategy Session
+                        Start Digital Growth
                     </button>
                 </div>
             </section>

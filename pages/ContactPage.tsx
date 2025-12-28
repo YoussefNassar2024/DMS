@@ -7,6 +7,7 @@ const ContactPage: React.FC = () => {
         "Search Engine Marketing",
         "Brand Identity",
         "Content Production",
+        "Website Design",
         "Other"
     ];
 
@@ -35,7 +36,7 @@ const ContactPage: React.FC = () => {
                     <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
             </div>
-            <span className="text-gray-500 font-medium group-hover:text-dms-gray transition-colors">{label}</span>
+            <span className="text-gray-500 font-bold group-hover:text-dms-gray transition-colors uppercase tracking-tight text-xs">{label}</span>
         </label>
     );
 
@@ -57,21 +58,21 @@ const ContactPage: React.FC = () => {
                         <div className="space-y-12">
                              <div>
                                 <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Direct Email</h3>
-                                <a href="mailto:srd.inquiry@gmail.com" className="text-2xl font-light hover:text-dms-green transition-colors">srd.inquiry@gmail.com</a>
+                                <a href="mailto:info@trustthedata.net" className="text-2xl font-light hover:text-dms-green transition-colors">info@trustthedata.net</a>
                             </div>
                             <div>
-                                <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Immediate Line</h3>
-                                <a href="tel:+201112457711" className="text-2xl font-light hover:text-dms-green transition-colors">+20 111 245 7711</a>
+                                <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Clearwater Line</h3>
+                                <a href="tel:7272184871" className="text-2xl font-light hover:text-dms-green transition-colors">(727) 218-4871</a>
                             </div>
                              <div>
-                                <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">DMS Office</h3>
-                                <p className="text-xl font-light text-gray-400 leading-relaxed">6 October<br/>Giza<br/>Egypt</p>
+                                <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Agency Address</h3>
+                                <p className="text-xl font-light text-gray-400 leading-relaxed">Clearwater,<br/>Florida,<br/>United States</p>
                             </div>
                         </div>
 
                         <div className="mt-20 pt-12 border-t border-white/10">
-                            <p className="text-xs text-gray-500 uppercase tracking-widest leading-relaxed">
-                                Our team operates globally. Expect a strategic response within one business day.
+                            <p className="text-xs text-gray-500 uppercase tracking-widest leading-relaxed font-bold">
+                                We proudly provide all the services you need for the best results.
                             </p>
                         </div>
                     </div>
@@ -82,27 +83,27 @@ const ContactPage: React.FC = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Full Name</label>
-                                    <input type="text" placeholder="Your Name" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-medium"/>
+                                    <input type="text" placeholder="Your Name" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-black uppercase tracking-tight"/>
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Organization</label>
-                                    <input type="text" placeholder="Enter Company Name" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-medium"/>
+                                    <input type="text" placeholder="Enter Company Name" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-black uppercase tracking-tight"/>
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Email Address</label>
-                                    <input type="email" placeholder="your_email@company.com" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-medium"/>
+                                    <input type="email" placeholder="email@company.com" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-black uppercase tracking-tight"/>
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Phone Number</label>
-                                    <input type="tel" placeholder="+201112457711" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-medium"/>
+                                    <input type="tel" placeholder="(727) 000-0000" required className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-black uppercase tracking-tight"/>
                                 </div>
                                 <div className="space-y-2 md:col-span-2">
                                     <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Project Budget</label>
-                                    <select className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-medium appearance-none cursor-pointer">
-                                        <option value="">Choose a range</option>
-                                        <option>$5k - $10k</option>
-                                        <option>$10k - $25k</option>
-                                        <option>$25k+</option>
+                                    <select className="w-full pb-4 bg-transparent border-b-2 border-gray-100 focus:border-dms-green transition-colors duration-300 focus:outline-none text-xl font-black uppercase tracking-tight appearance-none cursor-pointer">
+                                        <option value="">Select Range</option>
+                                        <option>$2k - $5k</option>
+                                        <option>$5k - $15k</option>
+                                        <option>$15k+</option>
                                     </select>
                                 </div>
                             </div>
@@ -117,8 +118,8 @@ const ContactPage: React.FC = () => {
                             </div>
 
                             <div className="space-y-4 pt-6">
-                                <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Brief Overview</label>
-                                <textarea placeholder="Tell us about your objectives..." rows={4} className="w-full p-6 bg-dms-light-gray rounded-2xl border-2 border-transparent focus:border-dms-green transition-all duration-300 focus:outline-none text-lg"></textarea>
+                                <label className="text-[10px] uppercase tracking-widest font-black text-gray-400">Business Objectives</label>
+                                <textarea placeholder="Tell us about your project goals..." rows={4} className="w-full p-6 bg-dms-light-gray rounded-2xl border-2 border-transparent focus:border-dms-green transition-all duration-300 focus:outline-none text-lg font-medium"></textarea>
                             </div>
 
                             <div className="pt-6">

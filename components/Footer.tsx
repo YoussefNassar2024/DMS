@@ -39,16 +39,18 @@ const Footer: React.FC<FooterProps> = ({ navigateTo, currentPage }) => {
                 <div className="bg-dms-green py-16 text-white overflow-hidden relative">
                     <div className="absolute inset-0 bg-black opacity-10"></div>
                     <div ref={ctaRef} className="container mx-auto px-6 text-center relative z-10 will-animate">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to launch your next digital project?</h2>
-                        <p className="text-lg mb-8 max-w-2xl mx-auto" style={{ animationDelay: '0.2s' }}>Let us craft strategies that drive results and growth.</p>
-                        <button onClick={() => navigateTo('contact')} className="bg-white text-dms-green font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-transform transform hover:scale-105" style={{ animationDelay: '0.4s' }}>
-                            Get In Touch
+                        <h2 className="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tighter">Ready to set your company apart?</h2>
+                        <p className="text-lg mb-8 max-w-3xl mx-auto font-medium" style={{ animationDelay: '0.2s' }}>
+                            We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
+                        </p>
+                        <button onClick={() => navigateTo('contact')} className="bg-white text-dms-green font-black py-4 px-12 rounded-full hover:bg-gray-100 transition-transform transform hover:scale-105 shadow-xl uppercase tracking-widest text-xs" style={{ animationDelay: '0.4s' }}>
+                            Start Your Strategy
                         </button>
                     </div>
                 </div>
              )}
             <div className="bg-dms-dark-gray text-gray-300 py-16">
-                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Column 1: Logo & About */}
                     <div className="md:col-span-1">
                         <div className="flex items-center mb-6 cursor-pointer group" onClick={() => navigateTo('home')}>
@@ -61,37 +63,37 @@ const Footer: React.FC<FooterProps> = ({ navigateTo, currentPage }) => {
                                 </span>
                              </div>
                         </div>
-                        <p className="text-sm text-gray-400">
-                           Crafting data-driven strategies for service-based businesses to clarify marketing focus and deliver tangible results.
+                        <p className="text-sm text-gray-400 font-medium">
+                           Trust the Data in Clearwater, FL. We elevate your business above the highly competitive Internet using right marketing strategies.
                         </p>
                     </div>
 
                     {/* Column 2: Menu */}
                     <div>
-                        <h3 className="font-bold text-white uppercase tracking-wider mb-4">Menu</h3>
-                        <ul className="space-y-3">
-                            <li><a onClick={() => navigateTo('home')} className="hover:text-dms-green cursor-pointer transition-colors">Home</a></li>
-                            <li><a onClick={() => navigateTo('about')} className="hover:text-dms-green cursor-pointer transition-colors">About</a></li>
-                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors">Services</a></li>
-                             <li><a onClick={() => navigateTo('contact')} className="hover:text-dms-green cursor-pointer transition-colors">Contact</a></li>
+                        <h3 className="font-black text-white uppercase tracking-widest text-xs mb-6">Explore</h3>
+                        <ul className="space-y-3 font-bold text-sm">
+                            <li><a onClick={() => navigateTo('home')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Home</a></li>
+                            <li><a onClick={() => navigateTo('about')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Agency</a></li>
+                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Services</a></li>
+                             <li><a onClick={() => navigateTo('contact')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Contact</a></li>
                         </ul>
                     </div>
 
                     {/* Column 3: Services */}
                     <div>
-                        <h3 className="font-bold text-white uppercase tracking-wider mb-4">Services</h3>
-                         <ul className="space-y-3">
-                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors">SEO</a></li>
-                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors">Social Media</a></li>
-                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors">Content Marketing</a></li>
-                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors">PPC</a></li>
+                        <h3 className="font-black text-white uppercase tracking-widest text-xs mb-6">Expertise</h3>
+                         <ul className="space-y-3 font-bold text-sm">
+                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">SEO Strategy</a></li>
+                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Social Media</a></li>
+                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">Content Marketing</a></li>
+                            <li><a onClick={() => navigateTo('services')} className="hover:text-dms-green cursor-pointer transition-colors uppercase tracking-tight">PPC & AI</a></li>
                         </ul>
                     </div>
 
                     {/* Column 4: Social */}
                     <div>
-                        <h3 className="font-bold text-white uppercase tracking-wider mb-4">Follow Us</h3>
-                        <div className="flex space-x-4">
+                        <h3 className="font-black text-white uppercase tracking-widest text-xs mb-6">Presence</h3>
+                        <div className="flex space-x-6">
                             <a href="#" aria-label="Facebook" className="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1"><FacebookIcon className="w-6 h-6" /></a>
                             <a href="#" aria-label="Instagram" className="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1"><InstagramIcon className="w-6 h-6" /></a>
                             <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1"><TwitterIcon className="w-6 h-6" /></a>
@@ -100,8 +102,8 @@ const Footer: React.FC<FooterProps> = ({ navigateTo, currentPage }) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-black text-gray-500 text-center py-4 text-sm">
-                <p>&copy; {new Date().getFullYear()} Dependable Marketing Solutions. All Rights Reserved.</p>
+            <div className="bg-black text-gray-500 text-center py-6 text-xs font-bold uppercase tracking-widest">
+                <p>&copy; {new Date().getFullYear()} Dependable Marketing Solutions. Clearwater, FL.</p>
             </div>
         </footer>
     );

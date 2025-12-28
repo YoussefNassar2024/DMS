@@ -27,27 +27,27 @@ export const teamMembers: TeamMember[] = [
 export const services: Service[] = [
     {
         icon: SeoIcon,
-        title: 'Search Engine Optimization',
-        description: 'SEO, you know you need it. Your competition is doing it. We identify the words and phrases people are using to find what they need and then we make the changes to your site so that you\'re the one they find.',
+        title: 'SEARCH ENGINE OPTIMIZATION',
+        description: 'We make it possible for your business to compete online by placing your website higher in local search results of Google and strategically placing your ads where they are most effective.',
     },
     {
         icon: SocialIcon,
-        title: 'Social Media Marketing',
-        description: 'Social media marketing is one of the most effective ways to tell your story, share your vision, and promote your business in Clearwater, FL. We can help you create informative and engaging content.',
+        title: 'SOCIAL MEDIA MARKETING',
+        description: 'Our social media distribution is excellent at reaching a larger audience quickly so you don’t need an expensive marketing team!',
     },
      {
         icon: ContentIcon,
-        title: 'Content Marketing',
-        description: 'The content you create is the foundation of your buyer’s journey. Our experts help in creating high-quality content that helps you attract your ideal customer and aligns with your brand’s voice.',
+        title: 'CONTENT MARKETING',
+        description: 'We will write content to rank high on Google, so you can start getting traffic from search engines and converting visitors into customers.',
     },
     {
         icon: PpcIcon,
-        title: 'Pay Per Click',
-        description: 'PPC ads are displayed when people search for products and services like yours online. You only pay when a user clicks on your ad, making pay-per-click advertising a flexible and affordable way to market your business.',
+        title: 'PAY PER CLICK',
+        description: 'We provide well targeted PPC advertising. Our industry leading AI technology gives us access to vast amounts of data that keep us ahead of other PPC providers.',
     },
      {
         icon: DesignIcon,
-        title: 'Design',
-        description: 'Dependable Marketing Solutions, a premier website design agency in Clearwater, FL, provides a comprehensive range of website design services to businesses in the area. Our design services will help you create engaging and responsive websites that capture attention.',
+        title: 'WEBSITE DESIGN',
+        description: 'Having trouble with design? Our team is ready to take your dreams and make them a reality! Click the button below to read more about our web design services.',
     },
 ];

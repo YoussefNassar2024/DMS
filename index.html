@@ -71,6 +71,7 @@
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+        
         .will-animate {
             opacity: 0;
             transform: translateY(20px);
@@ -80,13 +81,29 @@
             transform: translateY(0);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
+        /* DISABLE MOBILE ANIMATIONS EXCEPT LOGO */
+        @media (max-width: 768px) {
+            .will-animate {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .animated {
+                transition: none !important;
+                animation: none !important;
+            }
+            .animate-fade-in, .animate-fade-in-up, .animate-reveal {
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
         .text-gradient {
             background: linear-gradient(to right, #70BF4A, #3A54A5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        .mask-image {
-            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -99,61 +116,30 @@
             border-radius: 10px;
         }
 
-        /* Faster Infinite Logo Drawing Animation */
+        /* Logo Drawing Animation */
         .logo-draw-path {
             stroke-dasharray: 400;
             stroke-dashoffset: 400;
             fill-opacity: 0;
             stroke: currentColor;
             stroke-width: 1.5;
-            animation: infiniteRedraw 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: infiniteRedraw 5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
         }
 
         @keyframes infiniteRedraw {
-            0% { 
-                stroke-dashoffset: 400; 
-                fill-opacity: 0; 
-                stroke-width: 1.5; 
-            }
-            /* 1.25 seconds (25%): Finish drawing outline */
-            25% { 
-                stroke-dashoffset: 0; 
-                fill-opacity: 0; 
-                stroke-width: 1.5; 
-            }
-            /* 0.5 seconds (35%): Fill solid color */
-            35% { 
-                stroke-dashoffset: 0; 
-                fill-opacity: 1; 
-                stroke-width: 0; 
-            }
-            /* 2 seconds (75%): Hold state */
-            75% { 
-                stroke-dashoffset: 0; 
-                fill-opacity: 1; 
-                stroke-width: 0; 
-            }
-            /* 0.5 seconds (85%): Fade out color */
-            85% { 
-                stroke-dashoffset: 0; 
-                fill-opacity: 0; 
-                stroke-width: 1.5; 
-            }
-            /* 0.75 seconds (100%): Undraw strokes / Reset */
-            100% { 
-                stroke-dashoffset: 400; 
-                fill-opacity: 0; 
-                stroke-width: 1.5; 
-            }
+            0% { stroke-dashoffset: 400; fill-opacity: 0; stroke-width: 1.5; }
+            25% { stroke-dashoffset: 0; fill-opacity: 0; stroke-width: 1.5; }
+            35% { stroke-dashoffset: 0; fill-opacity: 1; stroke-width: 0; }
+            75% { stroke-dashoffset: 0; fill-opacity: 1; stroke-width: 0; }
+            85% { stroke-dashoffset: 0; fill-opacity: 0; stroke-width: 1.5; }
+            100% { stroke-dashoffset: 400; fill-opacity: 0; stroke-width: 1.5; }
         }
 
-        /* Staggered start for different parts of the logo */
         .logo-part-1 { animation-delay: 0s; }
         .logo-part-2 { animation-delay: 0.15s; }
         .logo-part-3 { animation-delay: 0.3s; }
         .logo-part-4 { animation-delay: 0.45s; }
 
-        /* Subtle glow on hover */
         .group:hover .logo-draw-path {
             filter: drop-shadow(0 0 8px rgba(112, 191, 74, 0.4));
             transition: filter 0.3s ease;
@@ -170,7 +156,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-white selection:bg-dms-green selection:text-white overflow-x-hidden">
+<body class="bg-white selection:bg-dms-green selection:text-white overflow-x-hidden antialiased">
     <div id="root"></div>
 <script type="module" src="/index.tsx"></script>
 </body>
