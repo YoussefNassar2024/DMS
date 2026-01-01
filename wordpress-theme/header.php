@@ -5,116 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
 
-<header class="fixed top-0 left-0 w-full z-[100] transition-all duration-500 py-6">
-    <div class="container mx-auto px-4 sm:px-6">
-        <div class="glass px-4 sm:px-8 py-3 rounded-full flex justify-between items-center shadow-2xl mx-0 sm:mx-6 md:mx-10">
-            <!-- Logo & Company Name -->
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="cursor-pointer flex items-center gap-2 sm:gap-4 group">
-                <?php get_template_part('template-parts/logo'); ?>
-                <div class="flex flex-col justify-center border-l-2 border-gray-100 pl-2 sm:pl-4 h-8 sm:h-10">
-                    <span class="font-black text-dms-gray leading-tight text-[10px] sm:text-[13px] uppercase tracking-[0.1em] sm:tracking-[0.15em] antialiased whitespace-nowrap">
-                        Dependable<br/>
-                        <span class="text-dms-green font-extrabold">Marketing</span><br/>
-                        Solutions
-                    </span>
-                </div>
-            </a>
+<body <?php body_class('bg-white text-gray-900'); ?>>
 
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-6 lg:space-x-10">
-                <?php
-                if (has_nav_menu('primary')) {
-                    wp_nav_menu(array(
-                        'theme_location' => 'primary',
-                        'container' => false,
-                        'menu_class' => 'hidden md:flex items-center space-x-6 lg:space-x-10',
-                        'items_wrap' => '%3$s',
-                        'walker' => new DMS_Primary_Nav_Walker()
-                    ));
-                }
-                ?>
-            </nav>
+<header class="sticky top-0 bg-white border-b z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-            <!-- Toggle Button & Desktop CTA -->
-            <div class="flex items-center gap-2 sm:gap-4">
-                <a
-                    href="<?php echo esc_url(home_url('/contact')); ?>"
-                    class="hidden lg:block bg-dms-green text-white px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-dms-green-light transition-all duration-300 shadow-lg shadow-dms-green/20"
-                >
-                    Consultation
-                </a>
+        <a href="<?php echo esc_url(home_url('/')); ?>"
+           class="text-xl font-bold">
+            DMS
+        </a>
 
-                <button
-                    onclick="dmsToggleMobileMenu()"
-                    class="p-2 focus:outline-none z-[110] transition-colors duration-500 text-dms-gray md:hidden"
-                    aria-label="Toggle Menu"
-                    id="mobile-menu-toggle"
-                >
-                    <div class="w-5 sm:w-6 h-4 sm:h-5 relative flex flex-col justify-between">
-                        <span class="w-full h-0.5 bg-current transition-all duration-300" id="menu-line-1"></span>
-                        <span class="w-full h-0.5 bg-current transition-all duration-300" id="menu-line-2"></span>
-                        <span class="w-full h-0.5 bg-current transition-all duration-300" id="menu-line-3"></span>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 z-[90] glass-dark flex flex-col transition-all duration-700 ease-in-out translate-x-full">
-    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-dms-green/10 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="absolute bottom-1/4 -left-20 w-96 h-96 bg-dms-blue/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="container mx-auto px-10 h-full flex flex-col pt-32 pb-12 relative z-10">
-        <div class="mb-12 opacity-0 transform -translate-y-4" id="mobile-menu-header">
-            <span class="text-dms-green text-[10px] font-black uppercase tracking-[0.5em] block mb-2">Navigation Menu</span>
-            <div class="w-12 h-1 bg-dms-green"></div>
-        </div>
-
-        <nav class="flex-grow flex flex-col justify-center">
+        <nav class="hidden md:block">
             <?php
-            if (has_nav_menu('primary')) {
-                wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'container' => false,
-                    'items_wrap' => '%3$s',
-                    'walker' => new DMS_Mobile_Nav_Walker()
-                ));
-            }
+            wp_nav_menu([
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_class' => 'flex gap-8 font-medium'
+            ]);
             ?>
         </nav>
 
-        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 items-end">
-            <div class="opacity-0 transform translate-y-4" style="animation: fadeInUp 0.6s ease forwards 0.6s;">
-                <p class="text-gray-500 text-[10px] font-black uppercase tracking-[0.3em] mb-4">Get In Touch</p>
-                <a href="mailto:info@trustthedata.net" class="block text-white text-lg font-light mb-2 hover:text-dms-green transition-colors">info@trustthedata.net</a>
-                <a href="tel:7272184871" class="block text-white text-lg font-light hover:text-dms-green transition-colors">(727) 218-4871</a>
-            </div>
-
-            <div class="flex flex-col items-start sm:items-end gap-6 opacity-0 transform translate-y-4" style="animation: fadeInUp 0.6s ease forwards 0.7s;">
-                <div class="flex gap-6">
-                    <a href="#" class="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.749.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.747-1.378 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24.001 12.017 24.001c6.624 0 11.99-5.367 11.99-12C24.007 5.367 18.641.001.012.017z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-dms-green transition-all transform hover:-translate-y-1">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                </div>
-                <p class="text-white/30 text-[9px] uppercase tracking-[0.4em] font-bold text-left sm:text-right">
-                    Trust the Data.<br/>Reach the Goal.
-                </p>
-            </div>
-        </div>
     </div>
-</div>
-
+</header>
