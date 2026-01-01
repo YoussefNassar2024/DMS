@@ -68,7 +68,7 @@ const AboutPage: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl">
                         <span className="text-dms-green font-bold text-xs uppercase tracking-[0.4em] mb-4 block animate-fade-in">Clearwater, FL Office</span>
-                        <h1 className="text-5xl md:text-8xl font-black text-dms-gray mb-8 leading-[0.9] uppercase tracking-tighter animate-fade-in-up">
+                        <h1 className="text-4xl md:text-8xl font-black text-dms-gray mb-8 leading-[0.9] uppercase tracking-tighter animate-fade-in-up">
                             Understanding Your<br/>
                             <span className="text-dms-green">Business</span> Goals.
                         </h1>
