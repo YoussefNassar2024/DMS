@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 const ContactPage: React.FC = () => {
@@ -64,8 +65,8 @@ const ContactPage: React.FC = () => {
 
             <div className="container mx-auto px-6">
                 <div className="bg-white rounded-[3rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border border-gray-50 flex flex-col lg:flex-row overflow-hidden">
-                    {/* Sidebar: Strategic Info */}
-                    <div className="lg:w-1/3 bg-dms-dark-gray text-white p-12 lg:p-20 relative">
+                    {/* Sidebar: Strategic Info (Updated from Dark Gray to Blue) */}
+                    <div className="lg:w-1/3 bg-dms-blue text-white p-12 lg:p-20 relative">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-dms-green/20 blur-3xl rounded-full"></div>
                         <h2 className="text-4xl font-black mb-12 uppercase tracking-tighter">Strategic HQ</h2>
                         
@@ -88,16 +89,16 @@ const ContactPage: React.FC = () => {
                                         Copied to clipboard!
                                     </span>
                                 )}
-                                <p className="mt-2 text-[10px] text-gray-500 uppercase tracking-widest hidden md:block">Click to copy number</p>
+                                <p className="mt-2 text-[10px] text-white/40 uppercase tracking-widest hidden md:block">Click to copy number</p>
                             </div>
                              <div>
                                 <h3 className="text-xs font-black text-dms-green uppercase tracking-[0.4em] mb-4">Agency Address</h3>
-                                <p className="text-xl font-light text-gray-400 leading-relaxed">Clearwater,<br/>Florida,<br/>United States</p>
+                                <p className="text-xl font-light text-white/70 leading-relaxed">Clearwater,<br/>Florida,<br/>United States</p>
                             </div>
                         </div>
 
                         <div className="mt-20 pt-12 border-t border-white/10">
-                            <p className="text-xs text-gray-500 uppercase tracking-widest leading-relaxed font-bold">
+                            <p className="text-xs text-white/50 uppercase tracking-widest leading-relaxed font-bold">
                                 We proudly provide all the digital marketing services you need to ensure you get the best results for your business.
                             </p>
                         </div>

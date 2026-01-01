@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Page } from '../types';
 import Logo from './Logo';
@@ -35,7 +36,6 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigateTo }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Toggle body scroll when menu is open
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -63,15 +63,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigateTo }) => {
                     scrolled ? 'py-3' : 'py-6'
                 }`}
             >
-                <div className="container mx-auto px-6">
-                    <div className={`glass px-4 sm:px-6 py-3 rounded-full flex justify-between items-center shadow-2xl transition-all duration-500 ${scrolled ? 'mx-0' : 'mx-0 sm:mx-12'}`}>
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className={`glass px-4 sm:px-8 py-3 rounded-full flex justify-between items-center shadow-2xl transition-all duration-500 ${scrolled ? 'mx-0' : 'mx-0 sm:mx-6 md:mx-10'}`}>
                         {/* Logo & Company Name */}
-                        <div className="cursor-pointer flex items-center gap-4 group" onClick={() => handleNavigation('home')}>
-                            <Logo className="h-9 sm:h-11 text-dms-green flex-shrink-0 transition-transform duration-300 group-hover:scale-105" />
-                            <div className="flex flex-col justify-center border-l-2 border-gray-100 pl-4 h-8 sm:h-10">
-                                <span className="font-black text-dms-gray leading-tight text-[11px] sm:text-[13px] uppercase tracking-[0.15em] antialiased">
+                        <div className="cursor-pointer flex items-center gap-2 sm:gap-4 group" onClick={() => handleNavigation('home')}>
+                            <Logo className="h-8 sm:h-11 text-dms-green flex-shrink-0 transition-transform duration-300 group-hover:scale-105" />
+                            <div className="flex flex-col justify-center border-l-2 border-gray-100 pl-2 sm:pl-4 h-8 sm:h-10">
+                                <span className="font-black text-dms-gray leading-tight text-[10px] sm:text-[13px] uppercase tracking-[0.1em] sm:tracking-[0.15em] antialiased whitespace-nowrap">
                                     Dependable<br/>
-                                    <span className="text-dms-green">Marketing</span><br/>
+                                    <span className="text-dms-green font-extrabold">Marketing</span><br/>
                                     Solutions
                                 </span>
                             </div>
@@ -83,23 +83,23 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigateTo }) => {
                                 <a 
                                     key={link.page}
                                     onClick={() => handleNavigation(link.page)}
-                                    className={`cursor-pointer transition-all duration-500 uppercase font-bold tracking-[0.2em] text-[10px] relative group ${
-                                        currentPage === link.page ? 'text-dms-green' : 'text-dms-gray hover:text-dms-green'
+                                    className={`cursor-pointer transition-all duration-500 uppercase font-black tracking-[0.2em] text-[11px] relative group ${
+                                        currentPage === link.page ? 'text-dms-blue' : 'text-dms-gray hover:text-dms-blue'
                                     }`}
                                 >
                                     {link.label}
-                                    <span className={`absolute -bottom-1 left-0 w-0 h-[2px] bg-dms-green transition-all duration-300 ease-out group-hover:w-full ${currentPage === link.page ? 'w-full' : ''}`}></span>
+                                    <span className={`absolute -bottom-1.5 left-0 w-0 h-[2px] bg-dms-blue transition-all duration-300 ease-out group-hover:w-full ${currentPage === link.page ? 'w-full' : ''}`}></span>
                                 </a>
                             ))}
                         </nav>
 
                         {/* Toggle Button & Desktop CTA */}
-                        <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-4">
                             <button 
                                 onClick={() => handleNavigation('contact')}
-                                className="hidden lg:block bg-dms-gray text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-dms-green transition-all duration-300"
+                                className="hidden lg:block bg-dms-green text-white px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-dms-green-light transition-all duration-300 shadow-lg shadow-dms-green/20"
                             >
-                                Free Consultation
+                                Consultation
                             </button>
                             
                             <button 
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, navigateTo }) => {
                 </div>
             </header>
 
-            {/* Enhanced Mobile Menu Overlay */}
+            {/* Mobile Menu Overlay */}
             <div className={`fixed inset-0 z-[90] glass-dark flex flex-col transition-all duration-700 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="absolute top-1/4 -right-20 w-96 h-96 bg-dms-green/10 rounded-full blur-[120px] pointer-events-none"></div>
                 <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-dms-blue/10 rounded-full blur-[120px] pointer-events-none"></div>

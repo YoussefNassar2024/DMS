@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { SecondaryLogo } from '../components/Logo';
 import { teamMembers } from '../constants';
@@ -44,7 +45,7 @@ const TeamMemberCard: React.FC<{ member: typeof teamMembers[0]; index: number }>
                 alt={member.name} 
                 className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-dms-dark-gray/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-dms-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="w-8 h-[2px] bg-dms-green mb-2"></div>
                     <p className="text-white text-xs uppercase tracking-[0.3em] font-bold">Expert Strategist</p>

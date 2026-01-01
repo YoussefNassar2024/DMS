@@ -24,11 +24,11 @@ const PrimaryLogo: React.FC<LogoProps> = ({ className }) => (
         className="logo-draw-path logo-part-2 transition-transform duration-300 ease-out group-hover:scale-90 origin-top-right" 
       />
       
-      {/* Bottom Left - 'b' / 'D' Shape */}
+      {/* Bottom Left - Square with Extra Heavy Uniform Border (12 units thick) and rounded right corners */}
       <path 
         fillRule="evenodd" 
         clipRule="evenodd" 
-        d="M41 55 H9 C6.791 55 5 56.791 5 59 V91 C5 93.209 6.791 95 9 95 H41 C43.209 95 45 93.209 45 91 V59 C45 56.791 43.209 55 41 55 Z M40 85 H25 V65 H40 V85 Z" 
+        d="M 5 55 H 39 Q 45 55 45 61 V 89 Q 45 95 39 95 H 5 Z M 17 67 H 33 V 83 H 17 Z" 
         className="logo-draw-path logo-part-3 transition-transform duration-300 ease-out group-hover:scale-90 origin-bottom-left" 
       />
       
