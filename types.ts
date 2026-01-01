@@ -1,5 +1,11 @@
-// FIX: Import React to resolve 'Cannot find namespace 'React'' error.
 import React from 'react';
+
+// 1. Allow TypeScript to see the global variable from WordPress
+declare global {
+  interface Window {
+    DMS_DATA: any;
+  }
+}
 
 export type Page = 'home' | 'about' | 'services' | 'contact';
 

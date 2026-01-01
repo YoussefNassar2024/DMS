@@ -1,0 +1,106 @@
+[
+  {
+    "key": "group_theme_settings",
+    "title": "Theme Settings",
+    "fields": [
+      {
+        "key": "field_hero_title",
+        "label": "Hero Title",
+        "name": "hero_title",
+        "type": "text",
+        "instructions": "Main title displayed in the hero section",
+        "default_value": "Dependable Marketing Solutions"
+      },
+      {
+        "key": "field_team_members",
+        "label": "Team Members",
+        "name": "team_members",
+        "type": "repeater",
+        "instructions": "Add team members to display on the About page",
+        "sub_fields": [
+          {
+            "key": "field_team_name",
+            "label": "Name",
+            "name": "name",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_team_role",
+            "label": "Role",
+            "name": "role",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_team_image",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "required": 1
+          }
+        ],
+        "min": 0,
+        "max": 10,
+        "layout": "table"
+      },
+      {
+        "key": "field_services",
+        "label": "Services",
+        "name": "services",
+        "type": "repeater",
+        "instructions": "Add services to display on the Services page and homepage",
+        "sub_fields": [
+          {
+            "key": "field_service_title",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_service_description",
+            "label": "Description",
+            "name": "description",
+            "type": "textarea",
+            "required": 1
+          },
+          {
+            "key": "field_service_icon",
+            "label": "Icon",
+            "name": "icon",
+            "type": "select",
+            "choices": {
+              "seo": "SEO",
+              "social": "Social Media",
+              "content": "Content Marketing",
+              "ppc": "Pay Per Click",
+              "design": "Web Design"
+            },
+            "default_value": "seo"
+          }
+        ],
+        "min": 0,
+        "max": 10,
+        "layout": "table"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "options_page",
+          "operator": "==",
+          "value": "theme-settings"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Global theme settings and content"
+  }
+]
